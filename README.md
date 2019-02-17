@@ -8,7 +8,7 @@ Currently, meterthingy is specific to the RaspberryPi.
 
 ToDo:
 1) Refactor. (Add comments, etc.)
-1) Make it work with systems other than the RaspberryPi.
 2) Add scaling feature. It currently works with 0-100 scale.
+3) Make it work with systems other than the RaspberryPi.
 
 
