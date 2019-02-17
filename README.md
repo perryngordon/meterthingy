@@ -1,6 +1,6 @@
 # meterthingy
 
-GPIO control over analog meters.
+Control an analog meter with your RaspberryPi.
 
 Setting a value in a text file results in the meter showing that value.
 
