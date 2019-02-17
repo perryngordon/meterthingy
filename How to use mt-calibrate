@@ -1,0 +1,9 @@
+in the meterthingy directory run:
+sudo mt-calibrate.py
+
+a version banner will be displayed
+afterwhich you can press the enter key until the meter needle lines up with the first value that you want to be showable, 
+then enter the value and press enter, a notification that the value was captured is displayed,
+continut to press enter unitl you arrive at the next value that you want to be showable,
+repeat until you have entered the max value that you want to be showable.
+
