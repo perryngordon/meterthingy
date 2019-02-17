@@ -13,6 +13,7 @@ import RPi.GPIO as GPIO
 
 setting = None
 pwmoutpin = 18
+loop_delay = 2
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pwmoutpin,GPIO.OUT)
@@ -39,4 +40,4 @@ while 1:
                         setting = new_setting
 
 
-        time.sleep(3)
+        time.sleep(loop_delay)
