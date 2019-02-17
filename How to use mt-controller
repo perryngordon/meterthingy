@@ -1,1 +1,2 @@
-
+in the meterthingy directory run:
+sudo python mt-controller.py
