@@ -35,7 +35,9 @@ while run:
                         p.ChangeDutyCycle(dc)
                         continue
 
-                dc = dc + 1
+                if dc < 100:
+			dc = dc + 1
+
                 p.ChangeDutyCycle(dc)
                 continue
 

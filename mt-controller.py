@@ -6,7 +6,7 @@
 # Sets the meter needle position based on the value in the mt.setting file
 # Reads the mt.calibration file and the mt.setting file
 ##
-
+import os
 import time
 import ast
 import RPi.GPIO as GPIO
@@ -18,6 +18,11 @@ loop_delay = 2
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pwmoutpin,GPIO.OUT)
 p = GPIO.PWM(pwmoutpin,50)
+
+if not os.path.exists('mt.setting'):
+	with open('mt.setting', 'w') as f:
+		f.write('0')
+		f.close() 
 
 while 1:
         ## read mt.setting
