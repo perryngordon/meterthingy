@@ -1,5 +1,5 @@
 in the meterthingy directory run:
-sudo mt-calibrate.py
+sudo python mt-calibrate.py
 
 a version banner will be displayed
 afterwhich you can press the enter key until the meter needle lines up with the first value that you want to be showable, 
