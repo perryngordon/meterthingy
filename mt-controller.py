@@ -23,6 +23,7 @@ if not os.path.exists('mt.setting'):
 	with open('mt.setting', 'w') as f:
 		f.write('0')
 		f.close() 
+		os.chmod('mt.setting',0o666)
 
 while 1:
         ## read mt.setting
