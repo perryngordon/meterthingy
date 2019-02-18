@@ -9,6 +9,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import os
 
 rpigpio_version = GPIO.VERSION
 rpi_info = GPIO.RPI_INFO
@@ -19,11 +20,15 @@ pwmoutpin = 18
 run = True
 meter_calibration = {}
 
+#GPIO.setmode(GPIO.BOARD)
+#GPIO.setup(pwmoutpin,GPIO.OUT)
+#p = GPIO.PWM(pwmoutpin,50)
+#p.stop()
+#GPIO.cleanup()
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pwmoutpin,GPIO.OUT)
-
-dc = 0
 p = GPIO.PWM(pwmoutpin,50)
+dc = 0
 
 while run:
         inp = raw_input()
@@ -49,11 +54,11 @@ while run:
                 print("adding calibration item")
                 meter_calibration[inp] = dc
 
-
+meter_calibration['0'] = 0
 print(meter_calibration)
 with open('mt.calibration','w') as file:
         file.write(str(meter_calibration))
-
+	os.chmod('mt.calibration',0o666)
 
 
 p.stop()
