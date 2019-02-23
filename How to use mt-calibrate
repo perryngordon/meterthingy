@@ -5,7 +5,7 @@ sudo python mt-calibrate.py
 
 a version banner will be displayed
 afterwhich you can press the enter key until the meter needle lines up with the first value that you want to be showable, 
-you do not have to set a value for zero, it is automatically set,
+(you do not have to set a value for zero, it is automatically set),
 then enter the value and press enter, a notification that the value was captured is displayed,
 continue to press enter unitl you arrive at the next value that you want to be showable,
 repeat until you have entered the max value that you want to be showable.
