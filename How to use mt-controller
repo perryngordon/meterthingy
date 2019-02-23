@@ -1,6 +1,10 @@
 in the meterthingy directory run:
+
 sudo python mt-controller.py &
 
 mt-controller will run in the background, and will change the meter needle position to match the value it finds in mt.setting,
 
-echo '20' > mt.setting
+for example:
+echo 20 > mt.setting
+
+mt-controller will set the meter to 20
