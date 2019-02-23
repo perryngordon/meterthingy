@@ -1,4 +1,6 @@
-in the meterthingy directory run:
+make sure mt-controller.py is not running
+
+run command:
 sudo python mt-calibrate.py
 
 a version banner will be displayed
