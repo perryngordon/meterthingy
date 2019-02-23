@@ -20,11 +20,13 @@ pwmoutpin = 18
 run = True
 meter_calibration = {}
 
+# this will be pre-run gpio cleanup, once I figure it out how to do it...
 #GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(pwmoutpin,GPIO.OUT)
 #p = GPIO.PWM(pwmoutpin,50)
 #p.stop()
 #GPIO.cleanup()
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pwmoutpin,GPIO.OUT)
 p = GPIO.PWM(pwmoutpin,50)
@@ -50,11 +52,12 @@ while run:
                 run = False
                 continue
 
-        if int(inp) in range(1,101,1):
+	intinp = int(inp)
+        if intinp in range(1,101,1):
                 print("adding calibration item")
-                meter_calibration[inp] = dc
+                meter_calibration[intinp] = dc
 
-meter_calibration['0'] = 0
+meter_calibration[0] = 0
 print(meter_calibration)
 with open('mt.calibration','w') as file:
         file.write(str(meter_calibration))

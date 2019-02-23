@@ -28,7 +28,7 @@ if not os.path.exists('mt.setting'):
 while 1:
         ## read mt.setting
         with open('mt.setting','r') as file:
-                new_setting = file.read().rstrip('\n')
+                new_setting = int(float(file.read().rstrip('\n')))
                 file.close()
 
         ## set meter if value changed
