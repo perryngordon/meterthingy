@@ -37,13 +37,14 @@ while 1:
                         calibration = ast.literal_eval(file.readline())
                         file.close()
 
-                        meter_setting = float(calibration[new_setting])
-                        if setting == None:
-                                p.start(meter_setting)
-                        else:
-                                p.ChangeDutyCycle(meter_setting)
+			if new_setting in calibration:
+                        	meter_setting = float(calibration[new_setting])
+                        	if setting == None:
+                                	p.start(meter_setting)
+                        	else:
+                                	p.ChangeDutyCycle(meter_setting)
 
-                        setting = new_setting
+                        	setting = new_setting
 
 
         time.sleep(loop_delay)
