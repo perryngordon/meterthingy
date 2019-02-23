@@ -1,0 +1,10 @@
+To run meterthingy, the following will need to be present on your RaspberryPi:
+
+1) Python version 2.7 or greater
+
+2) The python module RPi.GPIO version 0.6.2 or greater. If pip is installed on your RaspberryPi, then you can use it to install this dependency: 
+
+	cd meterthingy
+	pip install -r requirments.txt
+
+ 
